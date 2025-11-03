@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tablero Kanban</title>
+    
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>Kanban</h1>
+    </header>
+
+    <main class="kanban-board">
+    
+        <section class="column" id="todo">
+            <h2>Todo</h2>
+            
+            <div class="cards-container">
+                <article class="card">
+                    <p>Terminar la tarea 2 de cliente: Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur sequi cumque nihil beatae provident quisquam velit...</p>
+                    <button class="delete-btn">×</button>
+                </article>
+                <article class="card">
+                    <p>Terminar la tarea 3 de cliente: Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <button class="delete-btn">×</button>
+                </article>
+                <article class="card">
+                    <p>Terminar la tarea 2 de diseño</p>
+                    <button class="delete-btn">×</button>
+                </article>
+                <article class="card">
+                    <p>Terminar la tarea 1 de servidor. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <button class="delete-btn">×</button>
+                </article>
+            </div>
+            
+            <div class="add-card-form">
+                <textarea placeholder="Introduce un título"></textarea>
+                <div class="form-buttons">
+                    <button class="add-btn">Añadir tarjeta</button>
+                    <button class="close-btn">×</button>
+                </div>
+            </div>
+
+            <button class="add-card-btn">+ Añade una tarjeta</button>
+        </section>
+
+        <section class="column" id="doing">
+            <h2>Doing</h2>
+            <div class="cards-container">
+                <article class="card">
+                    <p>Terminar la tarea 1 de cliente: Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dicta ullam unde! Quasi eos magnam debitis impedit? Cupiditate asperiore</p>
+                    <button class="delete-btn">×</button>
+                </article>
+            </div>
+            
+            <div class="add-card-form">
+                <textarea placeholder="Introduce un título"></textarea>
+                <div class="form-buttons">
+                    <button class="add-btn">Añadir tarjeta</button>
+                    <button class="close-btn">×</button>
+                </div>
+            </div>
+
+            <button class="add-card-btn">+ Añade una tarjeta</button>
+        </section>
+
+        <section class="column" id="done">
+            <h2>Done</h2>
+            <div class="cards-container">
+                </div>
+            
+            <div class="add-card-form">
+                <textarea placeholder="Introduce un título"></textarea>
+                <div class="form-buttons">
+                    <button class="add-btn">Añadir tarjeta</button>
+                    <button class="close-btn">×</button>
+                </div>
+            </div>
+
+            <button class="add-card-btn">+ Añade una tarjeta</button>
+        </section>
+
+    </main>
+
+</body>
+</html>

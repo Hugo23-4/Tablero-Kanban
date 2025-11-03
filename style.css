@@ -1,0 +1,207 @@
+:root {
+    /* Paleta de colores de la imagen */
+    --color-fondo-cabecera: #dcdcfc; 
+    --color-texto-cabecera: #000000;
+    --color-boton-primario: #4a47a3; 
+    --color-texto-primario: #ffffff;
+    --color-fondo-pagina: #b188ee; 
+    --color-fondo-columna: #e9e9f0; 
+    --color-tarjeta: #ffffff;
+    --color-texto-normal: #333333;
+    --color-texto-enlace: #555555;
+    --sombra: 0 4px 8px rgba(0, 0, 0, 1);
+}
+
+/* 2. Estilos Globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: Lorem ipsum, dolor sit, amet consectetur, adipisicing elit; /* Cogido del pdf */
+    background-color: var(--color-fondo-pagina);
+    padding: 2rem;
+    color: var(--color-texto-normal);
+}
+
+.main-header {
+    text-align: left;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-header h1 {
+    color: var(--color-texto-cabecera);
+    font-size: 2rem;
+}
+
+/* 3. Layout */
+.kanban-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.column {
+    background-color: var(--color-fondo-columna);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* 4. Componentes*/
+.column h2 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.75rem;
+    background-color: var(--color-fondo-cabecera);
+    color: var(--color-texto-cabecera);
+    border-radius: 6px;
+    border: 1px solid #000;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.cards-container {
+    min-height: 0px;
+}
+
+.card {
+    background-color: var(--color-tarjeta);
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #000;
+    position: relative;
+    cursor: grab;
+    transition: background-color 0.3s ease;
+}
+
+.kanban-board .column .card:hover {
+    background-color: #b188ee;
+}
+
+.card p {
+    color: var(--color-texto-normal);
+    line-height: 1.4;
+    font-size: 0.9rem;
+    transition: padding-right 0.3s ease;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #999;
+    font-size: 1.1rem;
+    line-height: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.add-card-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--color-texto-enlace);
+    padding: 0.5rem;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.add-card-form {
+    margin-top: 0.5rem;
+}
+
+.add-card-form textarea {
+    width: 100%;
+    min-height: 60px;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem;
+    box-shadow: var(--sombra-suave);
+    font-family: Lorem ipsum, dolor sit, amet consectetur, adipisicing elit; /* Cogido del pdf */
+    font-size: 0.9rem;
+    resize: vertical;
+}
+
+.add-card-form .form-buttons {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.add-card-form .add-btn {
+    background-color: var(--color-boton-primario);
+    color: var(--color-texto-primario);
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.add-card-form .close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    font-size: 1.5rem;
+    color: #777;
+    line-height: 1;
+}
+
+#todo .add-card-btn {
+    display: none; 
+}
+
+#doing .add-card-form,
+#done .add-card-form {
+    display: none; 
+}
+
+/* 5. Hover*/
+.card:hover {
+    background-color: #fcfcff;
+}
+
+.card:hover .delete-btn {
+    opacity: 1;
+}
+
+.card:hover p {
+    padding-right: 1.5rem; 
+}
+
+.delete-btn:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.add-card-btn:hover {
+    background-color: #cccccc;
+    color: #111;
+}
+
+.add-card-form .add-btn:hover {
+    filter: brightness(1.1);
+}
+
+.add-card-form .close-btn:hover {
+    color: #333;
+}
