@@ -1,5 +1,5 @@
 :root {
-    /* Paleta de colores de la imagen */
+    /* Paleta de colores */
     --color-fondo-cabecera: #dcdcfc; 
     --color-texto-cabecera: #000000;
     --color-boton-primario: #4a47a3; 
@@ -104,7 +104,7 @@ body {
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
-    color: #999;
+    color: #3e3e3e;
     font-size: 1.1rem;
     line-height: 1;
     opacity: 0;
@@ -186,7 +186,7 @@ body {
 }
 
 .card:hover p {
-    transform: translateX(-1.5rem);
+    transform: translateX(-0.5rem);
 }
 
 .delete-btn:hover {
